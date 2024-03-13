@@ -122,6 +122,9 @@ pub mod limits;
 mod load_extension_guard;
 mod params;
 mod pragma;
+#[cfg(feature = "preupdate_hook")]
+#[cfg_attr(docsrs, doc(cfg(feature = "preupdate_hook")))]
+pub mod preupdate_hook;
 mod raw_statement;
 mod row;
 #[cfg(feature = "serialize")]

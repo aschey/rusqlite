@@ -650,7 +650,7 @@ impl InnerConnection {
     }
 }
 
-unsafe fn free_boxed_hook<F>(p: *mut c_void) {
+pub(super) unsafe fn free_boxed_hook<F>(p: *mut c_void) {
     drop(Box::from_raw(p.cast::<F>()));
 }
 
